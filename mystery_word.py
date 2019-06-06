@@ -8,37 +8,40 @@ print (answer)
 
 
 guesses = []
-letters_guessed = 8
+letters_guessed = []
 
 
-while guesses != 0:
+guesses = 5
+
+if len(str(guesses)) != len(str(answer)):
     letter = input("Enter a letter: ")
-    if letter in answer:
-        print ("You got one!")
-    # else:
-    #     #letters_guessed = letters_guessed - 1
-    #     print ("You have %d guesses left.") % (guesses)
-    #     #letters_guessed.append(letters_guessed)
+    #if letter in letters_guessed:
+eles
+    print your done
 
 #play_game()
 
-# """Let the user choose a level of difficulty at the beginning of the program.
+"""Let the user choose a level of difficulty at the beginning of the program.
    
-#    Easy mode only has words of 4-6 characters;""" 
-# def easy mode():
+   Easy mode only has words of 4-6 characters;""" 
+easy_mode_list = []
+normal_mode_list = []
+hard_mode_list = []
+
+def easy_mode(words):
                                 
-#     for answer in words                    
-#     if len(answer) >= 3 and len(answer) <= 5
-    
-# pass
-# """normal mode only has words of 6-8 characters;"""
-# def normal mode()
-# word                                
-#     for answer in words                    
-#     if len(word) >= 6 and len(word) <= 8
-# pass
-# """hard mode only has words of 8+ characters."""
-# def hard mode = len(8+)
+    for answer in words                    
+    if len(answer) >= 3 and len(answer) <= 5
+        easy_mode_list.append(answer)
+pass
+"""normal mode only has words of 6-8 characters;"""
+def normal mode()
+word                                
+    for answer in words                    
+    if len(word) >= 6 and len(word) <= 8
+pass
+"""hard mode only has words of 8+ characters."""
+def hard mode = len(8+)
 
 
 
@@ -100,5 +103,3 @@ while guesses != 0:
         
 # # elif option == "n":
 # #             print ("come back again")
-# # break
-
