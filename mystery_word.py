@@ -6,6 +6,12 @@ def dif():
             h hard mode  8+ characters.''')
 
     if option == "e":
+        (easy_mode(words))
+    
+    if option == "n":
+        print ("start Game!")
+
+    if option == "h":
         print ("start Game!")
 
 def game_start():
@@ -28,7 +34,7 @@ def answer_word():
     source_words = open("words.txt" , "r")
     words = (source_words.readlines())
     answer = random.choice(words)
-    return (answer)  
+    print (answer)  
 
 def easy_mode(words):
     easy_mode_list = []                          
