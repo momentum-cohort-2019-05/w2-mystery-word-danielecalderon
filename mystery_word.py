@@ -1,17 +1,17 @@
 import random
 
-#def play_game():
+def answer_word():
 source_words = open("words.txt" , "r")
 words = (source_words.readlines())
 answer = random.choice(words)
-print (answer)             
+return (answer)             
 
 
 guesses = []
 letters_guessed = []
 
 
-guesses = 5
+guesses = 8
 
 if len(str(guesses)) != len(str(answer)):
     letter = input("Enter a letter: ")
@@ -24,28 +24,29 @@ eles
 """Let the user choose a level of difficulty at the beginning of the program.
    
    Easy mode only has words of 4-6 characters;""" 
-easy_mode_list = []
-normal_mode_list = []
-hard_mode_list = []
+
+
+
 
 def easy_mode(words):
-                                
+    easy_mode_list = []                           
     for answer in words                    
-    if len(answer) >= 3 and len(answer) <= 5
+    if len(answer) >= 3 and len(answer) <= 5:
         easy_mode_list.append(answer)
 pass
 """normal mode only has words of 6-8 characters;"""
 def normal mode()
-word                                
-    for answer in words                    
-    if len(word) >= 6 and len(word) <= 8
-pass
+normal_mode_list = []
+for answer in words                    
+    if len(word) >= 6 and len(word) <= 7:
+        normal_mode_list.append(answer)
 """hard mode only has words of 8+ characters."""
-def hard mode = len(8+)
+def hard mode()
+hard_mode_list = []
+for answer in words
+    if len(word) >= 8:
+        hard_mode_list.append(answer)
 
-
-
-# play_game()
 
 
 # [letter if letter in guesses else "_" for letter in answer]
