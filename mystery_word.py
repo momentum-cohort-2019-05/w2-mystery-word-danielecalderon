@@ -6,52 +6,54 @@ word_list = words.read()
 word_list = word_list.lower().split()
 #print (word_list)
 
+def game_start():
+    
+    #while True:
+        print("""
+        Would you like to play?"
+        1) yes
+        2) no
+        """)
+        option = input("y or n: ")
+
+        if option == "y":
+            difficulty()
+        elif option == "n":
+            print ("come back again")
+
 def answer_word(word_list):
     answer_word = random.choice(word_list)
-    print (answer_word)  
+    #print (answer_word)  
+ #i = self._randbelow(len(seq))
+def difficulty(): 
+    difficulty = input("What difficulty setting do you want? Please enter easy, medium or hard.\n")
+    if difficulty == 'easy':
+        answer_word = answer_word(easy_mode(easy_mode_list)
+        # return (answer_word)
+        # print (answer_word)
 
-answer_word(word_list)
-
-
-
-
-# def dif():
-#     option = input('''What difficulty level? 
-#             e Easy 4-6 characters; 
-#             n normal  6-8 characters; 
-#             h hard mode  8+ characters.''')
-
-#     if option == "e":
-#         (easy_mode(answer_word))
-    
-#     if option == "n":
-#         print ("start Game!")
-
-#     if option == "h":
-#         print ("start Game!")
-
-# def game_start():
-    
-#     #while True:
-#         print("""
-#         Would you like to play?"
-#         1) yes
-#         2) no
+# print("""
+#     Welcome to the ACME inventory system!
+#     1) Enter items
+#     2) Print quantities
+#     X) Exit
 #         """)
-#         option = input("y or n: ")
+#         option = input("Choose an option: ")
 
-#         if option == "y":
-#             dif()
-#         elif option == "n":
-#             print ("come back again")
-               
+#         if option == "1":
+#             enter_items(item_quantities)
+#         elif option == "2":
+#             print_quantities(item_quantities)
+#         elif option.lower() == "x":
+#             save_inventory(item_quantities)
+#             break
 
 
-easy_mode_list = []
 def easy_mode(words_list):
-    for answer in words:                    
-        if len(answer) >= 3 and len(answer) <= 5:
-            easy_mode_list.append(answer)
+    easy_mode_list = []
+    for answer_word in words_list                    
+        if len(answer_word) >= 3 and len(answer_word) <= 5:
+            easy_mode_list.append(answer_word)
         return (easy_mode_list)
 
 """normal mode only has words of 6-8 characters;"""
@@ -67,6 +69,10 @@ def hard_mode(word_list):
     for answer in words:
         if len(answer) >= 8:
             hard_mode_list.append(answer)
+
+game_start()
+difficulty()
+answer_word(word_list)
 
 
 # guesses = []
