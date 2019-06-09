@@ -1,86 +1,82 @@
 import random
-def dif():
-    option = input('''What difficulty level? 
-            e Easy 4-6 characters; 
-            n normal  6-8 characters; 
-            h hard mode  8+ characters.''')
 
-    if option == "e":
-        (easy_mode(words))
+words = open("words.txt")
+word_list = words.read()
+#print (word_list)
+word_list = word_list.lower().split()
+#print (word_list)
+
+def answer_word(word_list):
+    answer_word = random.choice(word_list)
+    print (answer_word)  
+
+answer_word(word_list)
+
+
+
+
+# def dif():
+#     option = input('''What difficulty level? 
+#             e Easy 4-6 characters; 
+#             n normal  6-8 characters; 
+#             h hard mode  8+ characters.''')
+
+#     if option == "e":
+#         (easy_mode(answer_word))
     
-    if option == "n":
-        print ("start Game!")
+#     if option == "n":
+#         print ("start Game!")
 
-    if option == "h":
-        print ("start Game!")
+#     if option == "h":
+#         print ("start Game!")
 
-def game_start():
+# def game_start():
     
-    #while True:
-        print("""
-        Would you like to play?"
-        1) yes
-        2) no
-        """)
-        option = input("y or n: ")
+#     #while True:
+#         print("""
+#         Would you like to play?"
+#         1) yes
+#         2) no
+#         """)
+#         option = input("y or n: ")
 
-        if option == "y":
-            dif()
-        elif option == "n":
-            print ("come back again")
+#         if option == "y":
+#             dif()
+#         elif option == "n":
+#             print ("come back again")
                
 
-def answer_word():
-    source_words = open("words.txt" , "r")
-    words = (source_words.readlines())
-    answer = random.choice(words)
-    print (answer)  
 
-def easy_mode(words):
-    easy_mode_list = []                          
+easy_mode_list = []
+def easy_mode(words_list):
     for answer in words:                    
         if len(answer) >= 3 and len(answer) <= 5:
             easy_mode_list.append(answer)
+        return (easy_mode_list)
 
 """normal mode only has words of 6-8 characters;"""
-def normal_mode():
+def normal_mode(word_list):
     normal_mode_list = []
     for answer in words:
         if len(answer) >= 6 and len(answer) <= 7:
             normal_mode_list.append(answer)
+
 """hard mode only has words of 8+ characters."""
-def hard_mode():
+def hard_mode(word_list):
     hard_mode_list = []
     for answer in words:
         if len(answer) >= 8:
             hard_mode_list.append(answer)
 
 
-guesses = []
-letters_guessed = []
+# guesses = []
+# letters_guessed = []
+# guesses = 8
 
 
-guesses = 8
-
-game_start()
-
-# if len(str(guesses)) != len(str(answer)):
-#     letter = input("Enter a letter: ")
-#     #if letter in letters_guessed:
-#
-
-#play_game()
-
-"""Let the user choose a level of difficulty at the beginning of the program.
+# """Let the user choose a level of difficulty at the beginning of the program.
    
-   Easy mode only has words of 4-6 characters;""" 
-
-
-
-
-
-
-
+#    Easy mode only has words of 4-6 characters;""" 
 
 # [letter if letter in guesses else "_" for letter in answer]
 

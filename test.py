@@ -1,15 +1,10 @@
-word = "MAGNITUDE"
-current_guesses = ["G", "E", "T"]
-
-def display_letter(letter, guesses):
-    """
-    Conditionally display a letter. If the letter is already in
-    the list `guesses`, then return it. Otherwise, return "_".
-    """
-    if letter in guesses:
-        return letter
+def get_level():
+    level = input("What difficulty setting do you want? Please enter easy, medium or hard.\n")
+    level = level.lower()
+    if level == 'easy':
+        answer = random_word(easy_words(dictionary))
+    elif level == 'medium':
+        answer = random_word(medium_words(dictionary))
     else:
-        return "_"
-
-[display_letter(letter, current_guesses)
- for letter in word]
+        answer = random_word(hard_words(dictionary))
+    return answer
