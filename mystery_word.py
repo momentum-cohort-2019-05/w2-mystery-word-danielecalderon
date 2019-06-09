@@ -22,7 +22,7 @@ def normal_mode(word_list):
             normal_mode_list.append(word)
     return normal_mode_list
 
-# """hard mode only has words of 8+ characters."""
+"""hard mode only has words of 8+ characters."""
 def hard_mode(word_list):
     hard_mode_list = []
     for word in word_list:
@@ -33,11 +33,11 @@ def hard_mode(word_list):
 def answer_word(word_list): 
     answer_word = random.choice(word_list)
     #return answer_word
-    print (answer_word)  
+    return (answer_word)  
     #i = self._randbelow(len(seq))
 
 def difficulty(): 
-    difficulty = input("What difficulty setting do you want? Please enter easy, medium or hard.\n")
+    difficulty = input("What difficulty do you want? Please enter (e)asy, (m)edium or (h)ard.\n")
     difficulty = difficulty.lower()
     if difficulty == "e":
         answer = answer_word(easy_mode(source_words))
@@ -45,10 +45,17 @@ def difficulty():
         answer = answer_word(normal_mode(source_words))
     elif difficulty == "h":
         answer = answer_word(hard_mode(source_words))
-    return answer
+        #print (answer)
+    return answer 
+    game()
 
+def game(answer):
+    guesses = []
+    fails = 0
+    print("The word you're looking for has {} letters.".format(len(answer)))
 
 def game_start():
+    
     
     #while True:
         print("""
@@ -64,34 +71,10 @@ def game_start():
         elif option == "n":
             print ("come back again")
 
-
-
-
-
-
-
-
-
-# print("""
-#     Welcome to the ACME inventory system!
-#     1) Enter items
-#     2) Print quantities
-#     X) Exit
-#         """)
-#         option = input("Choose an option: ")
-
-#         if option == "1":
-#             enter_items(item_quantities)
-#         elif option == "2":
-#             print_quantities(item_quantities)
-#         elif option.lower() == "x":
-#             save_inventory(item_quantities)
-#             break
-
-
-
-
 game_start()
+
+#game(answer)
+
 #
 #difficulty()
 #answer_word(word_list)
@@ -112,8 +95,7 @@ game_start()
 
 
 
-# """At the start of the game, let the user know how many letters the computer's
-#    word contains."""
+
 
 # guess_word = Print("this is how many words" )
 
